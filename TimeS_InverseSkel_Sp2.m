@@ -24,10 +24,12 @@ for i = 1:1
     bwFilled = load( fileFilledPath );
     bwFilled = bwFilled.ellipseF;
 
-    % Read Initial Skeleton - Single Line
+    % Read Reference Skeleton - Not Used for Processing : Skeleton from
+    % Morphological Op
     skelD = load( fileSkelDPath );
     skelD = skelD.skelD;
 
+    % Read Initial Skeleton from i - 1 th data and radii 
     skelIdx = load( fileSkelInitPath );
     skelIdx = skelIdx.skelIdx_t;
     radiiList = load( fileRadiusInitPath );
