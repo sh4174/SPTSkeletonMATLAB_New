@@ -1,0 +1,5 @@
+Grid.Type = LoopSubdivision
+Grid.Model.SolverType = BruteForce
+Grid.Model.Atom.SubdivisionLevel = 0
+Grid.Model.Coefficient.FileName = /media/shong/IntHard1/4DAnalysis/Code/deformetrica-2.1/tutorials/EllipseMedAx/ellipse2HJSkel/CMRepTest/gmmreged_ellipse_scaled_t_9_r.vtk
+Grid.Model.Coefficient.FileType = VTK

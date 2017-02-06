@@ -1,0 +1,41 @@
+# CMREP Parameter File (for automatic fitting)
+
+# Define default parameters (optimization term weights)
+DefaultParameters.Mapping = LaplaceBasis
+DefaultParameters.LaplaceBasis.Size = 80		
+DefaultParameters.ImageMatch = VolumeOverlap
+DefaultParameters.MedialRegularityTerm.Weight = 0
+DefaultParameters.BoundaryCurvaturePenaltyTerm.Weight = 0.0
+DefaultParameters.BoundaryGradRPenaltyTerm.Weight = 0.0
+DefaultParameters.BoundaryJacobianEnergyTerm.Weight = 0.01
+DefaultParameters.BoundaryJacobianEnergyTerm.PenaltyA = 10
+DefaultParameters.BoundaryJacobianEnergyTerm.PenaltyB = 10
+DefaultParameters.RadiusPenaltyTerm.Weight = 0.00001
+DefaultParameters.AtomBadnessTerm.Weight = 0.0
+DefaultParameters.MedialCurvaturePenaltyTerm.Weight = 0
+DefaultParameters.MedialAnglesPenaltyTerm.Weight = 0.01
+DefaultParameters.DiffeomorphicPenaltyTerm.Weight = 0.0
+DefaultParameters.LocalDistancePenaltyTerm.Weight = 0.5
+DefaultParameters.LocalDistancePenaltyTerm.ReferenceModel.ArraySize=1
+DefaultParameters.LocalDistancePenaltyTerm.ReferenceModel.Element[0]=/media/shong/IntHard1/4DAnalysis/Code/deformetrica-2.1/tutorials/EllipseMedAx/ellipse2HJSkel/CMRepTest/def3.cmrep
+
+# Define optimization stages
+Stage.ArraySize = 2
+
+# First deformable stage
+Stage.Element[0].Name = def3_1
+Stage.Element[0].Mode = FitToBinary
+Stage.Element[0].Blur = 0.06
+Stage.Element[0].MaxIterations = 800
+Stage.Element[0].Parameters.Mapping = LaplaceBasis
+Stage.Element[0].Parameters.LaplaceBasis.Size = 80
+
+# Second deformable stage
+Stage.Element[1].Name = def3_2
+Stage.Element[1].Mode = FitToBinary
+Stage.Element[1].Blur = 0.06
+Stage.Element[1].MaxIterations = 200
+Stage.Element[1].Mapping = LaplaceBasis
+Stage.Element[1].Parameters.LaplaceBasis.Size = 100
+
+
